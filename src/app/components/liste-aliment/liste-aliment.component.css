@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: baseline;
-    width: 70rem;
     /* margin-top: 0.5rem; */
 }
 
@@ -18,7 +17,7 @@ li {
 }
 
 .container-aliments {
-    width: 70%;
+    width: 80%;
     height: 60vh;
 }
 
@@ -64,5 +63,25 @@ li {
     height: 1200px;
     overflow-y: scroll;
     scrollbar-width: auto;
+}
+
+
+
+@media (max-width: 1000px) {
+    .container-aliments {
+        display: flex;
+            justify-content: flex-start;
+            /* width: 80%; */
+            height: 60vh;
+        }
+
+    .container-title {
+            display: block;
+            justify-content: center;
+            text-align: center;
+            align-items: baseline;
+            /* width: 70rem; */
+            margin-top: 0.5rem;
+        }
 }
 

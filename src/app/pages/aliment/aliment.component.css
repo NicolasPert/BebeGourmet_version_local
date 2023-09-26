@@ -1,6 +1,20 @@
-.img {
+* {
+    /* margin: 0 !important; */
+    padding: 0 !important;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    
+}
+
+.background {
     background-image: url(../../../assets/panier_aliment.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
+
+
+
