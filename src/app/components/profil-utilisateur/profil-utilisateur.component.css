@@ -35,6 +35,7 @@
 }
 
 .initials-circle {
+    margin: auto;  /* ajout d'une margin auto pour centrer les initials et le bonjour username*/
     width: 100px;
     height: 100px;
     border-radius: 50%;

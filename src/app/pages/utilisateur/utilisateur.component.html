@@ -2,7 +2,7 @@
 <ng-container *ngIf="affichage">
   <div *ngIf="utilisateur">
     <app-profil-utilisateur [profil]="utilisateur"></app-profil-utilisateur>
-    <div class="d-flex flex-wrap justify-content-center container-principal">
+    <div class="d-flex flex-wrap justify-content-center container-principal img">
       <app-card-enfant
         *ngFor="let enfant of enfants"
         [enfant]="enfant"

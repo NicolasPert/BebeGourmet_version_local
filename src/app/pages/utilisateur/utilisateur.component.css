@@ -17,3 +17,9 @@
 .button-shadow-hover:not(.plusAjouter *):hover {
     box-shadow: 0px 0px 15px -4px #225777;
 }
+
+.img {
+    background-image: url(../../../assets/4bébé.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
