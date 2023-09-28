@@ -13,6 +13,7 @@ import { ModifEnfantComponent } from './components/modif-enfant/modif-enfant.com
 import { ModifAlimentComponent } from './components/modif-aliment/modif-aliment.component';
 import { SupprAlimentComponent } from './components/suppr-aliment/suppr-aliment.component';
 import { AjoutAlimentComponent } from './components/ajout-aliment/ajout-aliment.component';
+import { SupprEnfantComponent } from './components/suppr-enfant/suppr-enfant.component';
 
 const routes: Routes = [
   { path: '', component: CommencerComponent },
@@ -25,13 +26,16 @@ const routes: Routes = [
   { path: 'profil-utilisateur/ok', component: UtilisateurComponent },
   { path: 'profil-utilisateur/inscription', component: InscriptionComponent },
   { path: 'profil-utilisateur/connexion', component: ConnexionComponent },
-  { path: 'profil-utilisateur/child/add', component: AjoutEnfantComponent },
+  { path: 'profil-utilisateur/child/ajouter', component: AjoutEnfantComponent },
   {
-    path: 'profil-utilisateur/child/update/:id',
+    path: 'profil-utilisateur/child/supprimer/:id',
+    component: SupprEnfantComponent,
+  },
+  {
+    path: 'profil-utilisateur/child/modifier/:id',
     component: ModifEnfantComponent,
   },
   { path: 'profil-utilisateur/child/:id', component: ProfilEnfantComponent },
- 
 
   { path: '**', component: NotFoundComponent },
 ];

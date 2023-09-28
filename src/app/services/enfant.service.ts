@@ -12,7 +12,7 @@ export class EnfantService {
   constructor(private http: HttpClient) {}
 
   setHeaders() {
-    const jwtToken = localStorage.getItem('token');
+    const jwtToken = sessionStorage.getItem('token');
     const headers = new HttpHeaders({
       Authorization: `Bearer ${jwtToken}`,
     });
@@ -34,6 +34,16 @@ export class EnfantService {
       {
         headers,
       }
+    );
+  }
+
+  deleteEnfant(enfant :Enfant): Observable<Enfant> {
+    // recup le token dans le sessionstorage
+    const headers = this.setHeaders();
+    
+    return this.http.delete<Enfant>(
+      `http://localhost:3000/api/enfants/${enfant.id}`,
+      { headers }
     );
   }
 }

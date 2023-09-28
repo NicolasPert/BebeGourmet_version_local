@@ -21,7 +21,7 @@ h1 {
     display: flex;
     justify-content: center;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 0.06rem;
 }
 
 .btn {
@@ -43,6 +43,6 @@ button {
     border: none;
 }
 
-.margin {
-    margin-top: 12rem;
+.padding {
+    padding-top: 8rem;
 }

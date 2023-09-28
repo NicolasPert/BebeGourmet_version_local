@@ -34,13 +34,13 @@ export class AjoutAlimentComponent implements OnInit {
     private alimentService: AlimentService,
     private saisonService: SaisonService,
     private restrictionsService: RestrictionService,
-    private categorieService: CategorieService, 
-    private router :Router,
+    private categorieService: CategorieService,
+    private router: Router
   ) {}
 
   ngOnInit() {
     //réoriente vers 404 si pas admin
-    if (localStorage.getItem('profilUtilisateur') != 'true') {
+    if (sessionStorage.getItem('profilUtilisateur') != 'true') {
       this.router.navigate(['/**']);
     }
 
@@ -79,10 +79,8 @@ export class AjoutAlimentComponent implements OnInit {
     ) {
       alert(`Merci de renseigner les champs vides`);
     } else {
-      this.alimentService.createAliment(newAliment).subscribe(() => {});
-      setTimeout(() => {
-        location.reload();
-      }, 100); // ajout du settimeout pour refresh la page 
+      this.alimentService.createAliment(newAliment).subscribe(
+        () => { this.router.navigate([`/aliment`]); });
     }
   }
 
